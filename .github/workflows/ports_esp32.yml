@@ -24,10 +24,10 @@ jobs:
     - name: Build
       run: source tools/ci.sh && ci_esp32_build && ls
     - name: upload artifact
-      uses: actions/upload-artifact@v2 
+      uses: actions/upload-artifact@v3
       with:
         name: firmware402.zip
-        path: build-GENERIC/micropython.bin
+        path: build-GENERIC/
 
   build_idf44:
     runs-on: ubuntu-20.04
@@ -40,7 +40,7 @@ jobs:
     - name: Build
       run: source tools/ci.sh && ci_esp32_build && ls
     - name: upload artifact
-      uses: actions/upload-artifact@v2 
+      uses: actions/upload-artifact@v3 
       with:
         name: firmware44.zip
-        path: build-GENERIC/micropython.bin
+        path: build-GENERIC/
