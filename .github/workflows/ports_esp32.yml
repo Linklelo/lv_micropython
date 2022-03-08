@@ -26,8 +26,8 @@ jobs:
     - name: upload artifact
       uses: actions/upload-artifact@v2 
       with:
-        name: firmware402.bin
-        path: build/firmware.bin
+        name: firmware402.zip
+        path: build-GENERIC/*
 
   build_idf44:
     runs-on: ubuntu-20.04
@@ -42,5 +42,5 @@ jobs:
     - name: upload artifact
       uses: actions/upload-artifact@v2 
       with:
-        name: firmware44.bin
-        path: build/firmware.bin
+        name: firmware44.zip
+        path: build-GENERIC/*
