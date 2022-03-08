@@ -27,7 +27,7 @@ jobs:
       uses: actions/upload-artifact@v2 
       with:
         name: firmware402.zip
-        path: build-GENERIC/*
+        path: build-GENERIC/micropython.bin
 
   build_idf44:
     runs-on: ubuntu-20.04
@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v2 
       with:
         name: firmware44.zip
-        path: build-GENERIC/*
+        path: build-GENERIC/micropython.bin
