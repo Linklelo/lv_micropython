@@ -27,7 +27,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: firmware402.zip
-        path: build-GENERIC/
+        path: ports/esp32/build-GENERIC
 
   build_idf44:
     runs-on: ubuntu-20.04
@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v3 
       with:
         name: firmware44.zip
-        path: build-GENERIC/
+        path: ports/esp32/build-GENERIC
