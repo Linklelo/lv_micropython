@@ -22,7 +22,12 @@ jobs:
     - name: Install packages
       run: source tools/ci.sh && ci_esp32_idf402_setup
     - name: Build
-      run: source tools/ci.sh && ci_esp32_build
+      run: source tools/ci.sh && ci_esp32_build && ls
+    - name: upload artifact
+      uses: actions/upload-artifact@v2 
+      with:
+        name: firmware402.bin
+        path: build/firmware.bin
 
   build_idf44:
     runs-on: ubuntu-20.04
@@ -33,4 +38,9 @@ jobs:
     - name: Install packages
       run: source tools/ci.sh && ci_esp32_idf44_setup
     - name: Build
-      run: source tools/ci.sh && ci_esp32_build
+      run: source tools/ci.sh && ci_esp32_build && ls
+    - name: upload artifact
+      uses: actions/upload-artifact@v2 
+      with:
+        name: firmware44.bin
+        path: build/firmware.bin
