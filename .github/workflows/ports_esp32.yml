@@ -27,7 +27,10 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: firmware402.zip
-        path: ports/esp32/build-GENERIC
+        path:  |
+          ports/esp32/build-GENERIC/bootloader/bootloader.bin
+          ports/esp32/build-GENERIC/partition_table/partition-table.bin 
+          ports/esp32/build-GENERIC/micropython.bin
 
   build_idf44:
     runs-on: ubuntu-20.04
@@ -43,4 +46,7 @@ jobs:
       uses: actions/upload-artifact@v3 
       with:
         name: firmware44.zip
-        path: ports/esp32/build-GENERIC
+        path:  |
+          ports/esp32/build-GENERIC/bootloader/bootloader.bin
+          ports/esp32/build-GENERIC/partition_table/partition-table.bin 
+          ports/esp32/build-GENERIC/micropython.bin
